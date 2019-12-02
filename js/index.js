@@ -40,3 +40,42 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+
+
+// Creating nav parent Selector to be able to access it's children 
+let nav = document.querySelector('nav');
+
+// Creating a link Selectors
+let navItem = document.querySelectorAll('a');
+
+// Creating Services link text Selector
+let navItemOne = navItem[0];
+navItemOne.textContent = 'Services';
+
+// Creating Product link text Selector
+let navItemTwo = navItem[1]
+navItemTwo.textContent = 'Product'
+
+// Creating Vision link text Selector
+let navItemThree = navItem[2];
+navItemThree.textContent = 'Vision';
+
+// Creating Features
+let navItemFour = navItem[3];
+navItemFour.textContent = 'Features';
+
+// Creating About
+let navItemFive = navItem[4];
+navItemFive.textContent = 'About';
+
+// Creating Content
+let navItemSix = navItem[5];
+navItemSix.textContent = 'Content';
+
+
+
+
+console.log(navItem);
