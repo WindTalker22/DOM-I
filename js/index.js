@@ -41,41 +41,46 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+// Update navbar
+const navbar = document.querySelectorAll('a')
+navbar.forEach((element, i) => {
+  element.textContent = siteContent['nav'][`nav-item-${i+1}`];
+});
+
+// Adding image to header
+const headImg = document.getElementById('cta-img')
+headImg.setAttribute ('src', siteContent['cta']['img-src']);
 
 
+// Adding main-content
+const textCont = document.querySelectorAll('.text-content');
 
+textCont[0].children[0].textContent = siteContent['main-content']['features-h4']
+textCont[0].children[1].textContent = siteContent['main-content']['features-content']
+textCont[1].children[0].textContent = siteContent['main-content']['about-h4']
+textCont[1].children[1].textContent = siteContent['main-content']['about-content']
+textCont[2].children[0].textContent = siteContent['main-content']['services-h4']
+textCont[2].children[1].textContent = siteContent['main-content']['services-content']
+textCont[3].children[0].textContent = siteContent['main-content']['product-h4']
+textCont[3].children[1].textContent = siteContent['main-content']['product-content']
+textCont[4].children[0].textContent = siteContent['main-content']['vision-h4']
+textCont[4].children[1].textContent = siteContent['main-content']['vision-content']
 
-// Creating nav parent Selector to be able to access it's children 
-let nav = document.querySelector('nav');
+// Adding main-content image
+const mainContImg = document.getElementById('middle-img')
+mainContImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
-// Creating a link Selectors
-let navItem = document.querySelectorAll('a');
+// Header
+const header = document.querySelector('h1');
+header.setAttribute('style', 'white-space: pre;');
+header.textContent = 'Dom \r\n Is \r\n Awesome';
+header.style.color = 'limegreen';
+header.style.backgroundColor = 'black';
+header.style.width = '20rem'
 
-// Creating Services link text Selector
-let navItemOne = navItem[0];
-navItemOne.textContent = 'Services';
-
-// Creating Product link text Selector
-let navItemTwo = navItem[1]
-navItemTwo.textContent = 'Product'
-
-// Creating Vision link text Selector
-let navItemThree = navItem[2];
-navItemThree.textContent = 'Vision';
-
-// Creating Features
-let navItemFour = navItem[3];
-navItemFour.textContent = 'Features';
-
-// Creating About
-let navItemFive = navItem[4];
-navItemFive.textContent = 'About';
-
-// Creating Content
-let navItemSix = navItem[5];
-navItemSix.textContent = 'Content';
-
-
-
-
-console.log(navItem);
+//Button
+const getButt = document.querySelector('button');
+getButt.style.color = 'limegreen';
+getButt.style.backgroundColor = 'black';
+getButt.style.borderRadius = '20px';
+getButt.textContent = 'Get Started';
