@@ -47,6 +47,8 @@ navbar.forEach((element, i) => {
   element.textContent = siteContent['nav'][`nav-item-${i+1}`];
 });
 
+
+
 // Adding image to header
 const headImg = document.getElementById('cta-img')
 headImg.setAttribute ('src', siteContent['cta']['img-src']);
@@ -69,6 +71,16 @@ textCont[4].children[1].textContent = siteContent['main-content']['vision-conten
 // Adding main-content image
 const mainContImg = document.getElementById('middle-img')
 mainContImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+// Adding contact info
+const contactInfo = document.querySelector('.contact')
+console.log(contactInfo)
+contactInfo.children[0].textContent = siteContent['contact']['contact-h4']
+contactInfo.children[1].textContent = siteContent['contact']['address']
+contactInfo.children[2].textContent = siteContent['contact']['phone']
+contactInfo.children[3].textContent = siteContent['contact']['email']
+
 
 // Header
 const header = document.querySelector('h1');
