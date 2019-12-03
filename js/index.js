@@ -47,6 +47,24 @@ navbar.forEach((element, i) => {
   element.textContent = siteContent['nav'][`nav-item-${i+1}`];
 });
 
+// Prepend Hello link
+const nav = document.querySelector('nav')
+const firstNewLink = document.createElement('a')
+firstNewLink.textContent = 'Hello'
+firstNewLink.classList.add('a')
+nav.prepend(firstNewLink)
+firstNewLink.style.color = 'green'
+
+// Append Goodbye link
+const navTwo = document.querySelector('nav')
+const lastNewLink = document.createElement('a')
+lastNewLink.textContent = 'Goodbye'
+lastNewLink.classList.add('a')
+nav.append(lastNewLink)
+lastNewLink.style.color = 'green'
+
+// Gave navbar a color of green
+navbar.forEach(item => item.style.color = 'green')
 
 
 // Adding image to header
@@ -75,11 +93,16 @@ mainContImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 // Adding contact info
 const contactInfo = document.querySelector('.contact')
-console.log(contactInfo)
+
 contactInfo.children[0].textContent = siteContent['contact']['contact-h4']
 contactInfo.children[1].textContent = siteContent['contact']['address']
 contactInfo.children[2].textContent = siteContent['contact']['phone']
 contactInfo.children[3].textContent = siteContent['contact']['email']
+
+// Adding Footer
+const foot = document.querySelector('footer');
+
+foot.children[0].textContent = siteContent['footer']['copyright']
 
 
 // Header
