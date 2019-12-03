@@ -40,3 +40,82 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Update navbar
+const navbar = document.querySelectorAll('a')
+navbar.forEach((element, i) => {
+  element.textContent = siteContent['nav'][`nav-item-${i+1}`];
+});
+
+// Prepend Hello link
+const nav = document.querySelector('nav')
+const firstNewLink = document.createElement('a')
+firstNewLink.textContent = 'Hello'
+firstNewLink.classList.add('a')
+nav.prepend(firstNewLink)
+firstNewLink.style.color = 'green'
+
+// Append Goodbye link
+const navTwo = document.querySelector('nav')
+const lastNewLink = document.createElement('a')
+lastNewLink.textContent = 'Goodbye'
+lastNewLink.classList.add('a')
+nav.append(lastNewLink)
+lastNewLink.style.color = 'green'
+
+// Gave navbar a color of green
+navbar.forEach(item => item.style.color = 'green')
+
+
+// Adding image to header
+const headImg = document.getElementById('cta-img')
+headImg.setAttribute ('src', siteContent['cta']['img-src']);
+
+
+// Adding main-content
+const textCont = document.querySelectorAll('.text-content');
+
+textCont[0].children[0].textContent = siteContent['main-content']['features-h4']
+textCont[0].children[1].textContent = siteContent['main-content']['features-content']
+textCont[1].children[0].textContent = siteContent['main-content']['about-h4']
+textCont[1].children[1].textContent = siteContent['main-content']['about-content']
+textCont[2].children[0].textContent = siteContent['main-content']['services-h4']
+textCont[2].children[1].textContent = siteContent['main-content']['services-content']
+textCont[3].children[0].textContent = siteContent['main-content']['product-h4']
+textCont[3].children[1].textContent = siteContent['main-content']['product-content']
+textCont[4].children[0].textContent = siteContent['main-content']['vision-h4']
+textCont[4].children[1].textContent = siteContent['main-content']['vision-content']
+
+// Adding main-content image
+const mainContImg = document.getElementById('middle-img')
+mainContImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+// Adding contact info
+const contactInfo = document.querySelector('.contact')
+
+contactInfo.children[0].textContent = siteContent['contact']['contact-h4']
+contactInfo.children[1].textContent = siteContent['contact']['address']
+contactInfo.children[2].textContent = siteContent['contact']['phone']
+contactInfo.children[3].textContent = siteContent['contact']['email']
+
+// Adding Footer
+const foot = document.querySelector('footer');
+
+foot.children[0].textContent = siteContent['footer']['copyright']
+
+
+// Header
+const header = document.querySelector('h1');
+header.setAttribute('style', 'white-space: pre;');
+header.textContent = 'Dom \r\n Is \r\n Awesome';
+header.style.color = 'limegreen';
+header.style.backgroundColor = 'black';
+header.style.width = '20rem'
+
+//Button
+const getButt = document.querySelector('button');
+getButt.style.color = 'limegreen';
+getButt.style.backgroundColor = 'black';
+getButt.style.borderRadius = '20px';
+getButt.textContent = 'Get Started';
